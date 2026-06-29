@@ -1,0 +1,300 @@
+/* पूरे पेज का बैकग्राउंड और थीम */
+body {
+    background-color: #0f172a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* हेडर डिजाइन */
+.header {
+    padding: 20px;
+    border-bottom: 1px solid #1e293b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.heart-icon { font-size: 24px; }
+.logo-text { font-size: 20px; margin: 0; font-weight: bold; }
+.teal-text { color: #2dd4bf; }
+.badge {
+    background-color: rgba(45, 212, 191, 0.1);
+    color: #2dd4bf;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(45, 212, 191, 0.2);
+}
+
+/* मेन कंटेनर */
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+    padding: 40px 0;
+}
+.instruction-text h2 { font-size: 28px; margin-bottom: 10px; }
+.instruction-text p { color: #94a3b8; font-size: 16px; margin-top: 0; }
+
+/* माइक बटन और एनिमेशन */
+.mic-wrapper {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+.mic-button {
+    background: linear-gradient(to top right, #14b8a6, #22d3ee);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    width: 120px;
+    height: 120px;
+    font-size: 40px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(20, 184, 166, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mic-button:hover {
+    transform: scale(1.1);
+}
+
+/* रिकॉर्डिंग एक्टिव होने पर लाल रंग और पल्स एनीमेशन */
+.mic-active {
+    background: linear-gradient(to top right, #ef4444, #f87171) !important;
+    animation: pulseGlow 1.5s infinite ease-in-out;
+}
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6); }
+    70% { box-shadow: 0 0 0 25px rgba(239, 68, 68, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+/* इनपुट और आउटपुट बॉक्स */
+.card-box {
+    background-color: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    border-radius: 15px;
+    padding: 15px 20px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.card-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #64748b;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    letter-spacing: 1px;
+}
+.speech-text { color: #cbd5e1; font-style: italic; margin: 0; }
+.ai-box { background-color: #1e293b; }
+.ai-text { color: #e2e8f0; line-height: 1.6; margin: 0; }
+
+/* फुटर */
+.footer {
+    padding: 15px;
+    border-top: 1px solid #1e293b;
+    text-align: center;
+    font-size: 12px;
+    color: #475569;
+}
+
+ /* आपके डॉक्टर आइकन के लिए */
+ .icon {
+  font-size: 50px; /* आइकन का साइज (आप बदल सकते हैं) */
+  display: inline-block;
+  
+  /* आइकन एनीमेशन को यहाँ जोड़ा गया है */
+   animation: floatIcon 3s ease-in-out infinite;
+} 
+
+/* आइकन को हिलाने का नियम (Floating Effect) */
+@keyframes floatIcon {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.05); /* 15px ऊपर जाएगा और थोड़ा बड़ा होगा */
+  }
+  100% {
+    transform: translateY(0px) scale(1); /* वापस अपनी जगह आ जाएगा */
+  }
+} 
+
+ /* पूरे पेज का बैकग्राउंड कलर */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0f172a;
+}
+
+/* 1. बेसिक 'प्लस' स्टाइल और एनीमेशन जो सब पर लगेगा */
+.background-plus {
+    position: fixed;
+    top: -50px;
+    font-size: 30px;
+    z-index: -1;
+    animation: multiFall 10s linear infinite;
+    /* हल्की ट्रांसपेरेंसी जो सब पर लगेगी */
+    opacity: 0.15;
+}
+
+/* 2. एनीमेशन का नियम - नीचे गिरना और घूमना */
+@keyframes multiFall {
+    0% {
+        top: -50px;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 100vh;
+        transform: rotate(360deg);
+    }
+}
+
+/* 3. हर 'प्लस' पोजीशन और एनीमेशन टाइम देना */
+
+/* लाल प्लस - बाईं तरफ से, थोड़ा तेज */
+.plus-red {
+    left: 10%;
+    animation-duration: 8s;
+}
+
+/* हरा प्लस - बीच में, सबसे धीमा */
+.plus-green {
+    left: 45%;
+    animation-duration: 12s;
+}
+
+/* नीला प्लस - दाईं तरफ से, तेज */
+.plus-blue {
+    left: 80%;
+    animation-duration: 9s;
+}
+
+/* नारंगी प्लस - बीच में, लाल वाले के पास */
+.plus-orange {
+    left: 25%;
+    animation-duration: 11s;
+}
+.plus-purple {
+    left: 70%;
+    animation-duration: 10s;
+}
+/* बैंगनी प्लस - बीच में, नीले वाले के पास */
+.plus-neckbend {
+    left: 5%;
+    animation-duration: 9s;
+}
+
+.plus-injection{
+    left: 15%;
+    animation-duration: 11s;
+}
+
+.plus-dna{
+    left: 20%;
+    animation-duration: 12s;
+}
+
+.plus-capsul{
+    left: 50%;
+    animation-duration: 6s;
+}
+
+.plus-blood {
+    left: 60%;
+    animation-duration: 5s;
+}
+
+.plus-injection1 {
+    left: 75%;
+    animation-duration: 7s;
+}
+
+.plus-neckbend1 {
+    left: 85%;
+    animation-duration: 10s;
+}
+
+/* डॉक्टर किट के लिए - इसे बीच में वैसे ही रखा है */
+.medical-icon-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 300px;
+    opacity: 0.08;
+    z-index: -1;
+    animation: fadeAndPulse 3s ease-in-out infinite;
+}
+
+@keyframes fadeAndPulse {
+    0%, 100% {
+        opacity: 0.08;
+        transform: translate(-50%, -50%) scale(0.9); /*before scale(1)*/
+    }
+    50% {
+        opacity: 0.1;
+        transform: translate(-50%, -50%) scale(1.3);/*before scale(1.05)*/
+    }
+}
+
+/* 1. माइक के बाहरी सर्कल के लिए एनीमेशन */
+#micBtn{  
+    /* आपकी पुरानी CSS प्रॉपर्टीज (width, height, background-color) जैसी हैं वैसी ही रहेंगी, */
+    position: relative;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    
+    /* एनीमेशन: 2 सेकंड में सर्कल ग्लो (चमकता) रहेगा */
+    animation: micPulse 2s infinite ease-in-out;
+}
+
+/* 2. सर्कल के अंदर के माइक आइकॉन के लिए एनीमेशन */
+ #micIcon, #micIcon::after {
+    /* यह अंदर के माइक को धीरे से बड़ा-छोटा (Bounce) करेगा */
+    display: inline-block;
+    animation: micBounce 2s infinite ease-in-out;
+}
+
+/* --- एनीमेशन के नियम (Keyframes) --- */
+
+/* बाहर वाले सर्कल के चमकने और वेव बनाने का नियम */
+@keyframes micPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4), 0 0 20px rgba(0, 242, 254, 0.2);
+    }
+    50% {
+        /* बीच में यह थोड़ा और ज्यादा चमकेगा */
+        box-shadow: 0 0 0 15px rgba(34, 197, 94, 0), 0 0 30px rgba(0, 242, 254, 0.6);
+        transform: scale(1.02); /* हल्का सा पूरा बटन बड़ा होगा */
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0), 0 0 20px rgba(0, 242, 254, 0.2);
+    }
+}
+
+/* अंदर के माइक आइकॉन के हिलने का नियम */
+@keyframes micBounce {
+    0%, 100% {
+        transform: scale(1) translateY(0);
+    }
+    50% {
+        transform: scale(1.2) translateY(-3px); /* माइक थोड़ा बड़ा होगा और ऊपर उठेगा */
+    }
+}

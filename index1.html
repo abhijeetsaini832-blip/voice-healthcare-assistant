@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Healthcare Assistant</title>
+    <!-- हमारी लोकल style.css फाइल का लिंक -->
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo-area">
+            <span class="heart-icon">❤️</span>
+            <h1 class="logo-text">Voice Healthcare <span class="teal-text">Assistant</span></h1>
+        </div>
+        <span class="badge">AI Prototype</span>
+    </header>
+ <!-- background kit -->
+    
+    <div class="medical-icon-background">🧰</div> <!--🩺🫀❤️🧰-->
+    <div class="background-plus plus-red">➕</div>
+    <div class="background-plus plus-green">➕</div>
+    <div class="background-plus plus-blue">➕</div>
+    <div class="background-plus plus-orange">➕</div>
+    <div class="background-plus plus-purple">➕</div>
+    <div class="background-plus plus-purple">➕</div>
+    <div class="background-plus plus-neckbend">🩺</div>
+    <div class="background-plus plus-injection">💉</div>
+    <div class="background-plus plus-dna">🧬</div>
+    <div class="background-plus plus-capsul">💊</div>
+    <div class="background-plus plus-blood">🩸</div>
+    <div class="background-plus plus-injection1">💉</div>
+    <div class="background-plus plus-neckbend1">🩺</div>
+    <!-- <div class="container"></div>-->
+
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+     <!-- Dr. cura -->
+<img src="F:\voice_health_care\WhatsApp Image 2026-06-25 at 4.16.19 PM.jpeg" class="icon" alt="Dr.Cura" height="100px" weidth="100px"> <br/>
+          <div class="icon"> I Am Dr. Cura</div>
+
+        <div class="instruction-text">
+            <h2>नमस्ते, मैं आपकी कैसे मदद कर सकती हूँ?</h2>
+            <p>नीचे दिए गए माइक बटन को दबाएं और अपनी बीमारी के लक्षण बोलकर बताएं।</p>
+        </div>
+
+        <!-- Master Microphone Button -->
+        <div class="mic-wrapper">
+            <button id="micBtn" class="mic-button">
+                <span id="micIcon">🎤</span>
+            </button>
+        </div>
+
+        <!-- Real-time Speech Transcription Status -->
+        <div class="card-box">
+            <p class="card-title">आपका इनपुट (Live Speech):</p>
+            <p id="speechOutput" class="speech-text">"यहाँ आपकी बोली हुई बात दिखाई देगी..."</p>
+        </div>
+
+        <!-- AI Assistant Diagnosis Response Display -->
+        <div class="card-box ai-box">
+            <p class="card-title teal-text">एआई डॉक्टर का सुझाव:</p>
+            <p id="aiResponse" class="ai-text">प्रतिक्रिया सुनने के लिए कृपया ऊपर माइक का उपयोग करके बोलना शुरू करें।</p>
+        </div>
+
+    </main>
+
+    <!-- Footer Disclaimer Section -->
+    <footer class="footer">
+        अस्वीकरण: यह एक एआई प्रोटोटाइप है। यह वास्तविक चिकित्सा सलाह का विकल्प नहीं है। आपातकालीन स्थिति में तुरंत डॉक्टर से संपर्क करें।
+    </footer>
+
+    <!-- हमारी लोकल app.js फाइल का लिंक -->
+    <script src="aap1.js"></script>
+</body>
+</html>
